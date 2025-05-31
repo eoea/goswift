@@ -28,9 +28,7 @@ create-modulemap:
 	@echo ' export *' >> $(MODULEMAP_PATH)
 	@echo '}' >> $(MODULEMAP_PATH)
 
-create-xcframework-and-modulemap:
-	create-xcframework
-	create-modulemap
+create-xcframework-and-modulemap: create-xcframework create-modulemap
 
 clean:
 	rm -r ./include/*.a
